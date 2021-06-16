@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-15 16:13:50
- * @LastEditTime: 2021-06-16 13:57:47
+ * @LastEditTime: 2021-06-16 13:59:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /gtest_demo/gtest_demo1.cc
@@ -23,7 +23,7 @@ TEST(example, add)
 
 int main(int argc, char** argv)
 {
-    testing::InitGoogleTest(argc, argv);
+    testing::InitGoogleTest(&argc, argv);
     RUN_ALL_TESTS();
     return 0;
 }
