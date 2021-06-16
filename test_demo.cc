@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-15 16:13:50
- * @LastEditTime: 2021-06-16 14:25:21
+ * @LastEditTime: 2021-06-16 14:27:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /gtest_demo/gtest_demo1.cc
@@ -27,7 +27,7 @@ TEST(example, add)
     ASSERT_EQ(_r, 3);
 
     _r = add(2, 2);
-    ASSERT_EQ(_r, 4);
+    ASSERT_EQ(_r, 0);
 }
 
 TEST(example, sub)
