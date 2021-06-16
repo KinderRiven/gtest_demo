@@ -1,9 +1,9 @@
 GLIB_PATH := /home/hanshukai/googletest/build/lib
 
-all: demo1
+all: test_demo
 
-demo1:
-	g++ gtest_demo1.cc -o gtest_demo1 -I./include -L$(GLIB_PATH) -lgtest -pthread
+test_demo:
+	g++ test_demo.cc -o gtest_demo -I./include -L$(GLIB_PATH) -lgtest -pthread
 
 clean:
-	rm -rf gtest_demo1
+	rm -rf gtest_demo
