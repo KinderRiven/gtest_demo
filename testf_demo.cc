@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-15 16:13:50
- * @LastEditTime: 2021-06-16 14:27:17
+ * @LastEditTime: 2021-06-16 14:33:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /gtest_demo/gtest_demo1.cc
@@ -11,37 +11,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int add(int a, int b)
+class TestClass : public testing::Test {
+public:
+    TestClass()
+    {
+        printf("TestClass()\n");
+    }
+
+    ~TestClass()
+    {
+        printf("~TestClass()\n");
+    }
+
+public:
+    int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    int Sub(int a, int b)
+    {
+        return a - b;
+    }
+};
+
+TEST_F(TestClass, add)
 {
-    return a + b;
+    int _r = Add(2, 2);
+    ASSERT_EQ(_r, 4);
 }
 
-int sub(int a, int b)
+TEST_F(TestClass, sub)
 {
-    return a - b;
-}
-
-TEST(example, add)
-{
-    int _r = add(1, 2);
-    ASSERT_EQ(_r, 3);
-
-    _r = add(2, 2);
-    ASSERT_EQ(_r, 0);
-}
-
-TEST(example, sub)
-{
-    int _r = sub(1, 2);
-    ASSERT_EQ(_r, -1);
-
-    _r = sub(2, 2);
-    ASSERT_EQ(_r, 0);
-}
-
-TEST(example, bad)
-{
-    int _r = sub(1, 2);
+    int _r = Sub(2, 2);
     ASSERT_EQ(_r, 0);
 }
 
