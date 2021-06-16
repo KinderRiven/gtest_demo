@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-15 16:13:50
- * @LastEditTime: 2021-06-16 13:59:09
+ * @LastEditTime: 2021-06-16 14:00:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /gtest_demo/gtest_demo1.cc
@@ -13,12 +13,13 @@
 
 int add(int a, int b)
 {
+    printf("%d + %d = %d\n", a, b, a + b);
     return a + b;
 }
 
 TEST(example, add)
 {
-    add(1, 2);
+    int _r = add(1, 2);
 }
 
 int main(int argc, char** argv)
