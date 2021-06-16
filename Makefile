@@ -8,7 +8,7 @@ test_demo:
 testf_demo:
 	g++ testf_demo.cc -o gtestf_demo -I./include -L$(GLIB_PATH) -lgtest -pthread
 
-testf_demo:
+test_env:
 	g++ test_env.cc -o test_env -I./include -L$(GLIB_PATH) -lgtest -pthread
 
 clean:
